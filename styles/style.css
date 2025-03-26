@@ -1,4 +1,4 @@
-﻿html {
+html {
     scroll-snap-type: y mandatory;
 }
 
@@ -405,6 +405,9 @@ a.item:nth-child(4) {
     transform: translate(-44%, 190%);
 }
 
+a.item:nth-child(5) {
+    transform: translate(2%, 26%);
+}
 
 #footer {
     position: absolute;
@@ -438,7 +441,6 @@ a.item:nth-child(4) {
     position: relative;
     height: 100vh;
     background: black;
-    /*    background: radial-gradient(closest-corner at 25vw 44vh & circle at 100%, midnightblue 0%, black 110%);*/
     box-shadow: 0 0 500px rgba(0, 0, 0, 1) inset;
 }
 
@@ -500,23 +502,6 @@ a.item:nth-child(4) {
         box-shadow: gold 10px 10px revert;
     }
 
-@media (max-width: 1025px) {
-    .orbit {
-        rotate: 1 0 0 85deg;
-        --duration: 17s;
-        animation: orbit calc(var(--duration)) linear infinite;
-        width: 70%;
-    }
-}
-
-@media (max-width: 625px) {
-    .orbit {
-        rotate: 1 0 0 85deg;
-        --duration: 17s;
-        animation: orbit calc(var(--duration)) linear infinite;
-        width: 50%;
-    }
-}
 
 .orbit > .chakra.white {
     background-color: white;
@@ -779,91 +764,33 @@ h2.message {
     }
 }
 
-/*.starfall {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    z-index: 0;
-}
 
-    .starfall .falling-star {
-        width: 8px;
-        height: 8px;
-        background: #00d1b2;
-        position: absolute;
-        border-radius: 50%;
-        opacity: 0.5;
-    }
-
-.falling-star:nth-child(1) {
-    -webkit-transform: translateX(68vw) translateY(-8px);
-    transform: translateX(68vw) translateY(-8px);
-    -webkit-animation: anim1 4s infinite;
-    animation: anim1 4s infinite;
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-
-@-webkit-keyframes anim1 {
-    10% {
-        opacity: 0.5;
-    }
-
-    12% {
-        opacity: 1;
-        -webkit-box-shadow: 0 0 3px 0 #fff;
-        box-shadow: 0 0 3px 0 #fff;
-    }
-
-    15% {
-        opacity: 0.5;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateX(88vw) translateY(100vh);
-        transform: translateX(88vw) translateY(100vh);
-        opacity: 0;
-    }
-}
-
-@keyframes anim1 {
-    10% {
-        opacity: 0.5;
-    }
-
-    12% {
-        opacity: 1;
-        -webkit-box-shadow: 0 0 3px 0 #fff;
-        box-shadow: 0 0 3px 0 #fff;
-    }
-
-    15% {
-        opacity: 0.5;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateX(88vw) translateY(100vh);
-        transform: translateX(88vw) translateY(100vh);
-        opacity: 0;
-    }
-}*/
 /*dial of phone = 780 x 780*/
 /*phone dimensions = 1711 x 1333*/
 /*logo dimensions = 1000 x 1000*/
+
+
+
+
+@media (max-width: 1025px) {
+    .orbit {
+        rotate: 1 0 0 85deg;
+        --duration: 17s;
+        animation: orbit calc(var(--duration)) linear infinite;
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .orbit {
+        rotate: 1 0 0 85deg;
+        --duration: 17s;
+        animation: orbit calc(var(--duration)) linear infinite;
+        width: 70%;
+    }
+
+
+}
 
 @media (max-width: 775px) {
 
@@ -930,21 +857,37 @@ h2.message {
     a.nav-link:link {
         font-size: 1em;
     }
+
+
+    h1.message {
+        font-size: 4rem;
+    }
+
+    h2.message {
+        font-size: 3rem;
+    }
+
+
 }
 
-@media (max-width: 900px) {
+@media (max-width: 625px) {
     .orbit {
         rotate: 1 0 0 85deg;
         --duration: 17s;
         animation: orbit calc(var(--duration)) linear infinite;
-        width: 70%;
+        width: 50%;
     }
 
     h1.message {
-        font-size: 4em;
+        font-size: 3rem;
+        padding: 10px;
     }
 
     h2.message {
-        font-size: 3em;
+        font-size: 2rem;
+    }
+
+    .contact-me h1 {
+        font-size: 2rem;
     }
 }
